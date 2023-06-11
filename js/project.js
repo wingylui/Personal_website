@@ -83,7 +83,7 @@ d3.json("../Graph/clustering.json").then(function(data){
                 width: 550,
                 height: 400,
                 paper_bgcolor: 'rgba(0,0,0,0)',
-                scene: {xaxis: {title: "Perth CBD Distance"}, yaxis: {title: "Coast Distance"}, zaxis: {title: "Price"}},
+                scene: {xaxis: {title: "Perth CBD Distance (m)"}, yaxis: {title: "Coast Distance (m)"}, zaxis: {title: "Price ($)"}},
                         font: {family: "Arial", color: "#575757"},
                 showlegend: false
                 
