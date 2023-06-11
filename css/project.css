@@ -42,7 +42,6 @@
     left: 0;
     width: 28%;
     height: 100vh;
-    background: linear-gradient(#f1a1d0, #886ae3);
     z-index: 1;
 }
 
@@ -55,11 +54,11 @@
 }
 
 .project2{
-    background: linear-gradient(454deg, #a878eb, #eb8fd9);
+    background: linear-gradient(454deg, #7c78eb, #ae75cf);
 }
 
 .project3{
-    background: linear-gradient(454deg, #c0a9d2,  #70b3c0);
+    background: linear-gradient(454deg, #cdb6df,  #86becb);
 }
 
 
@@ -72,7 +71,7 @@
     position: fixed;
     display: flex;
     margin: 10px;
-    padding: 10px 52%;    
+    padding: 10px 63%;       
     /* align-items: flex-end; */
     z-index: 3;
 }
@@ -93,16 +92,16 @@
 .text-box{
     position: relative;
     margin-top: 20%;
-    max-width: 600;
+    max-width: 700;
     max-height: 300px;
-    margin-left: 50%;
+    margin-left: 45%;
     z-index: 5;
     background: rgba(0,0,0,0);
     
 }   
 
 .text-box h1{
-    font-size: 40px;
+    font-size: 50px;
     line-height: 90px;
     font-weight: 400;
     margin-bottom: 5px;
