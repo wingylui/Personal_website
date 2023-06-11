@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <Title>Wing Lui Personal Website</Title>
+        <link rel="stylesheet" href="../css/project.css">
+        <script src="https://kit.fontawesome.com/ed7e7f2a18.js" crossorigin="anonymous"></script>
+
+        <style>
+            /* svg[id^="mermaid-"] {max-width: 300px; max-height: 500px; font-size: 80px; overflow-y: scroll;} */
+        </style>
+       
+    </head>
+    <body>
+        
+        <div class="main">
+            <div class="main slides main-page">
+                <div class="second-background"></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="hobbies.html">Hobbies</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="slides text-box">
+                    <h1>Data Analytics projects</h1>
+                    <p>Four projects that worked in the data analytics bootcamp.</p>
+                    <p>Includes Machine learning, Python, Data visulaisation in Tableau and Javascript, ETL and more.</p>
+                </div>
+                <div class="slides scroll">
+                    <p>Scroll down</p>
+                    <i class="fa-solid fa-angles-down fa-fade"></i>
+                </div>
+            </div>
+            <div class="main slides project1">
+                <div class="slides text-project" style= "margin-top: 180px;">
+                    <h2><b>Perth Housing Analysis</b></h2>
+                    <p>Predicting Perth housing price with an optimised neural network model (Accuracy: 81.7%)</p>
+                    <p>Visualise Kmean clustering data in Tableau</p>
+                </div>
+                <div class='tableauPlaceholder' id='viz1686481749467' style='float: left; margin-top: 7%; width: 680px; height: 500px'><noscript><a href='#'><img alt='Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project4_16864772641010&#47;Dashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Project4_16864772641010&#47;Dashboard' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project4_16864772641010&#47;Dashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1686481749467');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='680px';vizElement.style.height='777px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='680px';vizElement.style.height='777px';} else { vizElement.style.width='100%';vizElement.style.height='1077px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                <div class="image-right" id="scatter"></div>
+                <div class="slides text-project" style="margin-top: 1%; color:#787878; height: 20px;">
+                    <p>Please click and drag to move 3D graph above</p>
+                </div>
+                <div class="icon-box">
+                    <a href="https://github.com/wingylui/housing_price_anaylsis"><i class="fa-brands fa-github fa-xl"></i></a>
+                    <a href="https://public.tableau.com/views/PerthHousingSales/Dashboard?:language=en-GB&:display_count=n&:origin=viz_share_link"><i style="padding-left:10px;" class="fa-solid fa-link fa-xl"></i></a>
+                </div>
+            </div>  
+            <div class="main slides project2">
+                <iframe class="website-view" src="https://wingylui.github.io/Coffee_Trading/"></iframe>
+                <div class="window-control">
+                    <div style="cursor: pointer;"onclick="back()"><i class="fa-solid fa-arrow-left fa-xl"></i></div>
+                    <div style="padding-left: 3%; cursor: pointer;"onclick="forward()"><i class="fa-solid fa-arrow-right fa-xl"></i></div>
+                </div>
+                <div style="margin-top: 0px;" class="icon-box">
+                    <a href="https://github.com/wingylui/Coffee_Trading"><i class="fa-brands fa-github fa-xl"></i></a>
+                    <a style="padding-left:10px;" href="https://wingylui.github.io/Coffee_Trading/"><i class="fa-solid fa-link fa-xl"></i></a>
+                </div>
+            </div> 
+            <div class="main slides project3">
+                <div class="slides text-project">
+                    <h2 style= "color: #074b70;"><b>Top Quality Coffee Production Chain</b></h2>
+                    <p>Web scraping top quality coffee reviews from <a herf="https://www.coffeereview.com/">Coffee Review </p></a>
+                    <p>Data store in PostgreSQL after Data cleaning and ETL</p>
+                    <p>Build an interactive dashboard in PowerBI</p>
+                </div>
+                <p style="margin-top: 14%;">PowerBI dashboard example: (Please check the link to visualise the PowerBi file)</p>
+                <img style="margin-top: 4px;" class="image-left" src="../image/coffee_species_dashboard_example.png">
+                <pre class="mermaid erdiagram">     
+                    erDiagram
+                    SPECIES_INFO ||--|{ SPECIES_LINK : From
+                    SPECIES_INFO{VARCHAR(6) species_id PK
+                        VARCHAR(21) species_name
+                        VARCHAR(15) plant_stature
+                        VARCHAR(16) leaf_colour
+                        VARCHAR(15) bean_size
+                        VARCHAR(3) species_id FK}
+
+                    SPECIES_LINK }|--|| COFFEE_MAIN : From
+                    SPECIES_LINK{VARCHAR(5) coffee_ID FK
+                        VARCHAR(6) species_coffee_id PK
+                        VARCHAR(3) species_id FK}
+
+                    COFFEE_MAIN ||--|{ ORIGIN : Grow_in
+                    COFFEE_MAIN {
+                        VARCHAR(5) coffee_ID PK
+                        VARCHAR(90) coffee_name
+                        Date review_date
+                        INT coffee_rating
+                        INT agtron_WB
+                        INT agtron_AG
+                        INT aroma
+                        INT acidity
+                        INT body
+                        INT flavor
+                        INT aftertaste
+                        VARCHAR(3) roast_lv_id FK
+                        VARCHAR(4) roaster_ID FK
+                        FLOAT price_per_kg_USD
+                    }
+                    
+                    ROASTER ||--|{ COFFEE_MAIN : made_by
+                    ROASTER{
+                        VARCHAR(4) raoster_id PK
+                        VARCHAR(40) raoster_name
+                        VARCHAR(7) city_id FK
+                    }
+                    
+                    CITY }|--|| ROASTER : in
+                    CITY{
+                        VARCHAR(30) roaster_city 
+                        VARCHAR(7) city_ID PK
+                        VARCHAR(6) country_id FK
+                    }
+                    
+                    ORIGIN ||--|{ COUNTRY : in
+                    ORIGIN {
+                        VARCHAR(5) coffee_ID FK
+                        VARCHAR(5) origin_id PK
+                        VARCHAR(6) coffee_origin_country_id FK
+                    }
+                    
+                    COUNTRY ||--|{ CITY : in
+                    COUNTRY{
+                        VARCHAR(6) country_id PK
+                        VARCHAR(40) country_name
+                    }
+                    
+                    ROAST_LEVEL ||--|{ COFFEE_MAIN : Roasted
+                    ROAST_LEVEL{
+                        VARCHAR(12) roast_level
+                        VARCHAR(3) roast_lv_id PK,FK
+                    }
+                </pre>
+                <div class="slides text-project" style="margin-left: 50%; margin-top: 1px; color:#606060; height: 20px;">
+                    <p>Entity Relationship Diagram</p>
+                </div>
+                                
+                <div style="margin-top: 1%;" class="icon-box">
+                    <a href="https://github.com/wingylui/top_quality_coffee_production_chain"><i class="fa-brands fa-github fa-xl"></i></a>
+                    <a style="padding-left:10px;" href="https://github.com/wingylui/top_quality_coffee_production_chain/blob/main/PowerBI/coffee_species_dashboard.pbix"><i class="fa-solid fa-link fa-xl"></i></a>
+                </div>
+            </div>   
+        </div>
+        <script src="https://d3js.org/d3.v7.min.js" charset="utf-8"></script>
+
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="../js/project.js"></script>
+        <script type="module">
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+            mermaid.initialize({ startOnLoad: true });
+          </script>
+
+
+    </body>
+</html>
