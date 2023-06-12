@@ -200,6 +200,11 @@
 
 }
 
+.second-image{
+    margin-top: 2px;
+    width: 700px;
+}
+
 .window-control{
     margin-top: 15px;
     margin-left: 1%;
@@ -222,8 +227,16 @@
     max-height: 350px; 
     font-size: 30px; 
     overflow-y: scroll;
-    color:#4c3217
+}
 
+.flowchart{
+    float: right;
+    margin-right: 12%;
+    margin-top: 2% ;
+    width: 350px;
+    max-height: 350px; 
+    font-size: 30px; 
+    overflow-y: scroll;
 }
 
 

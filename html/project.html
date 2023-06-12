@@ -30,15 +30,58 @@
             <div class="main slides project1">
                 <div class="slides text-project" style= "margin-top: 180px;">
                     <h2><b>Perth Housing Analysis</b></h2>
-                    <p>Predicting Perth housing price with an optimised neural network model (Accuracy: 81.7%)</p>
+                    <p>Predicting Perth housing price with an optimised neural network model</p>
                     <p>Visualise Kmean clustering data in Tableau</p>
                 </div>
                 <div class='tableauPlaceholder' id='viz1686481749467' style='float: left; margin-top: 7%; width: 680px; height: 500px'><noscript><a href='#'><img alt='Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project4_16864772641010&#47;Dashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Project4_16864772641010&#47;Dashboard' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project4_16864772641010&#47;Dashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1686481749467');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='680px';vizElement.style.height='777px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='680px';vizElement.style.height='777px';} else { vizElement.style.width='100%';vizElement.style.height='1077px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
                 <div class="image-right" id="scatter"></div>
-                <div class="slides text-project" style="margin-top: 1%; color:#787878; height: 20px;">
+                <div class="slides text-project" style="margin-top: 1%; color:#575757; height: 20px;">
                     <p>Please click and drag to move 3D graph above</p>
                 </div>
                 <div class="icon-box">
+                    <a href="https://github.com/wingylui/housing_price_anaylsis"><i class="fa-brands fa-github fa-xl"></i></a>
+                    <a href="https://public.tableau.com/views/PerthHousingSales/Dashboard?:language=en-GB&:display_count=n&:origin=viz_share_link"><i style="padding-left:10px;" class="fa-solid fa-link fa-xl"></i></a>
+                </div>
+            </div>  
+            <div class="main slides project1">
+                <div class="slides text-project" style= "margin-top: 80px;">
+                    <h2><b>Perth Housing Analysis</b></h2>
+                    <p>Predicting Perth housing price with an optimised neural network model</p>
+                    <p>Visualise Kmean clustering data in Tableau</p>
+                </div>
+                <div style= "margin-top: 5%; color:#606060" class="image-left">
+                    <p>Original Dataset Neural Network model:</p>
+                    <img style= "width: 690px;" src="../Graph/Initial.png">
+                    <p>Adding Coast Distance Dataset Neural Network model:</p>
+                    <img class= "second-image" src="../Graph/add_columns.png">
+                </div>
+                <pre class="mermaid flowchart">
+                    %%{
+                        init: {
+                          'theme': 'base',
+                          'themeVariables': {
+                            'primaryColor': '#a94240',
+                            'primaryTextColor': '#fff',
+                            'primaryBorderColor': '#8f2624',
+                            'lineColor': '#c47f71'
+                          }
+                        }
+                      }%%
+                    flowchart TD
+                    D1(Original Dataset) --> SE{{RandomSearchCV}} --> NN1{{Neural Network}} --> ML1([Accuracy: 67.9%]) --> C1{{Kmean Clustering}} --> N3{{Neural Network}} -->  ML2([Accuracy: 72.9%])
+                    C1{{Kmean Clustering}} --> N2{{Neural Network}} --> ML3([Accuracy: 60.0%])
+                    D2(Add Coast Distance Dataset) --> SE{{RandomSearchCV}}
+                    NN1{{Neural Network}} --> ML4([Accuracy: 81.6%])
+                </pre>
+                <div class="slides text-project" style="margin-top: 1px; color:#575757; height: 20px; max-width: 610px;">
+                    <p>A short summary of the process of opitmising neural network model</p>
+                    <p>1. Use RandomSearchCV to obtain the best hyperparameters (Accuracy: 67.9%)</p>
+                    <p>2. Seperate Dataset into different clusters and train a model seperately (Accuracy: 72.9%, 60.0%)</p>
+                    <p>3. Adding coast distance and apartments columns (Accuracy: 81.6%)</p>
+                </div>
+                
+                
+                <div style= "margin-top: 120px;" class="icon-box">
                     <a href="https://github.com/wingylui/housing_price_anaylsis"><i class="fa-brands fa-github fa-xl"></i></a>
                     <a href="https://public.tableau.com/views/PerthHousingSales/Dashboard?:language=en-GB&:display_count=n&:origin=viz_share_link"><i style="padding-left:10px;" class="fa-solid fa-link fa-xl"></i></a>
                 </div>
